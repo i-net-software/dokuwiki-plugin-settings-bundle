@@ -1,0 +1,9 @@
+# General Plugin Info do not edit
+
+base   settingsbundle
+author i-net software
+email  tools@inetsoftware.de
+date   2014-12-16
+name   Settings Bundle Renderer
+desc   Renders the site so that it can be embedded into a settings bundle for iOS
+url    
