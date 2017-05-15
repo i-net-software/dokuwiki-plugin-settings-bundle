@@ -14,13 +14,13 @@ require_once DOKU_INC . 'inc/parser/renderer.php';
 class renderer_plugin_settingsbundle extends Doku_Renderer {
 
     // @access public
-    var $doc = '';        // will contain the whole document
-    var $toc = array();   // will contain the Table of Contents
+    private $doc = '';        // will contain the whole document
+    private $toc = array();   // will contain the Table of Contents
 
-    var $footnotes = array();
-    var $store = '';
-    var $nSpan = 0;
-    var $separator = '';
+    private $footnotes = array();
+    private $store = '';
+    private $nSpan = 0;
+    private $separator = '';
 
     function getFormat(){
         return 'settings_bundle';
@@ -219,7 +219,7 @@ class renderer_plugin_settingsbundle extends Doku_Renderer {
 
     function code($text, $language = NULL) {
         $this->preformatted($text);
-	}
+    }
 
     function rss($url, $params) {
         $this->preformatted($url);
@@ -350,8 +350,8 @@ class renderer_plugin_settingsbundle extends Doku_Renderer {
     }
 
     function tablecell_close(){
-		if ( $this->nSpan > 1 )
-			$this->doc .= str_repeat(',',$this->nSpan-1);
+        if ( $this->nSpan > 1 )
+            $this->doc .= str_repeat(',',$this->nSpan-1);
         $this->nSpan = 0;
     }
 
